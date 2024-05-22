@@ -1,0 +1,287 @@
+/* style.css */
+
+/* Definição das cores */
+:root {
+    --cor-primaria: #C92527;
+    --cor-secundaria: #153973;
+    --cor-terciaria: #D9D9D9;
+    --cor-texto: #ffffff;
+    --cor-fundo-claro: #f2f2f2;
+    --cor-fundo-escuro: #797979;
+    --cor-detalhe-card: #000000;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-texto);
+    overflow-x: hidden;
+}
+
+h2 {
+    margin: 0;
+}
+
+.diario-oficial {
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+    padding-right: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diario-oficial-content {
+    padding: 0;
+    margin: 0;
+}
+
+.diario-oficial h1 {
+    color: var(--cor-texto);
+    text-align: center;
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+.diario-oficial .line {
+    width: 100px;
+    height: 9px;
+    background-color: var(--cor-texto);
+    display: flex;
+    border-radius: 30px;
+}
+
+.caixa-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-fundo-escuro);
+    padding: 20px;
+    height: 100px;
+}
+
+.caixa-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-row {
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.form-row label {
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.form-row input,
+.form-row select {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+    background-color: var(--cor-fundo-claro);
+    color: #000000;
+}
+
+.form-row button {
+    margin-left: 50px;
+    padding: 8px 20px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1;
+}
+
+.form-row button:hover {
+    background-color: #9c1e1e;
+}
+
+/* Estilo dos Cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--cor-fundo-claro);
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 400px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: var(--cor-detalhe-card);
+}
+
+.card .card-date,
+.card .card-year,
+.card .card-edition,
+.card .card-distribution {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.pdf-canvas {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Estilo do Footer */
+.footer {
+    width: 100%;
+    background: var(--cor-secundaria);
+    border-radius: 6px 6px 0 0;
+    padding: 20px 60px;
+    box-sizing: border-box;
+}
+
+.footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-row .footer-col h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.footer-col .links {
+    margin-top: 20px;
+}
+
+.footer-col .links li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+    text-decoration: none;
+    color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+    color: #fff;
+}
+
+.footer-col p {
+    margin: 20px 0;
+    color: #bfbfbf;
+    max-width: 300px;
+}
+
+.footer-col form {
+    display: flex;
+    gap: 5px;
+}
+
+.footer-col input {
+    height: 40px;
+    border-radius: 6px;
+    background: none;
+    width: 100%;
+    outline: none;
+    border: 1px solid #7489C6;
+    caret-color: #fff;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+    color: #ccc;
+}
+
+.footer-col form button {
+    background: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-col form button:hover {
+    background-color: #cecccc;
+}
+
+.footer-col .icons {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.footer-col .icons i {
+    color: #afb6c7;
+}
+
+.footer-col .icons i:hover {
+    color: #fff;
+}
+
+/* Estilo para paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--cor-texto);
+    background-color: var(--cor-primaria);
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #9c1e1e;
+}
+
+.pagination .active {
+    background-color: var(--cor-secundaria);
+}

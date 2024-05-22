@@ -1,0 +1,38 @@
+<?php
+
+$dir    = '.';
+$files1 = scandir($dir);
+
+foreach ( $files1 as $jornal)
+{
+	$diretorio = "";	
+	if (is_dir ($jornal) )
+	{
+		$mes = explode("_",$jornal);
+		$diretorio = "./$jornal/";
+		//echo "Diretorio: $diretorio <br/> ";
+	}
+	
+
+	if ( $diretorio != "" && $diretorio !="././" && $diretorio != "./../" )
+	{
+	$newFiles = scandir($diretorio);
+	
+	//Imprime o mes
+	echo "<h3 style='clear:both; margin-bottom:10px; border-bottom:dotted 1px #AEAEAE'> $mes[1] de  2009</h3>";
+ 
+	foreach ( $newFiles as $newjornal  )
+        {
+		if ( is_file ($diretorio."".$newjornal) )
+		{	
+		  echo "Arquivo: $newjornal <br/>";
+		}
+	}
+	}
+
+
+
+}
+
+
+?>
